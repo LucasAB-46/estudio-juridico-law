@@ -1,0 +1,32 @@
+/* 1. Directivas de Tailwind. DEBEN estar primero. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Imports (como el de Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* 3. Estilos base */
+@layer base {
+  /* CRÍTICO: Esto habilita el desplazamiento suave para los botones del menú */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: theme('colors.light');
+    color: theme('colors.dark-text');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Animación personalizada para el botón de WhatsApp */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 3s infinite;
+}
