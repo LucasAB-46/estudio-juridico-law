@@ -9,7 +9,7 @@ const PracticeAreas = () => {
     {
       id: 1,
       title: "Derecho Laboral",
-      description: "Defensa ante despidos injustificados, trabajo en negro y acoso laboral. Protegemos tu indemnización.",
+      description: "Defensa ante despidos injustificados, trabajo no registrado y acoso laboral. Protegemos tu indemnización.",
       icon: <FaBriefcase className="w-8 h-8" />,
     },
     {
@@ -21,7 +21,7 @@ const PracticeAreas = () => {
     {
       id: 3,
       title: "Ciudadanías",
-      description: "Asesoría integral para la obtención de ciudadanías europeas (Italiana, Española) y gestión de actas.",
+      description: "Asesoría integral para la obtención de ciudadanías europeas (Italiana, Española), gestión de actas, armado de carpetas y solicitud de turnos.",
       icon: <FaPassport className="w-8 h-8" />,
     },
     {
