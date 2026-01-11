@@ -71,16 +71,17 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // CORRECCIÓN DE LINKS: Nombres más comerciales y IDs correctos
   const links = [
     { name: 'Inicio', href: '#hero' },
-    { name: 'Áreas de Práctica', href: '#practice' },
-    { name: 'Sobre el Estudio', href: '#about' },
+    { name: 'Nuestros Servicios', href: '#areas-practica' }, // Corregido ID y Nombre
+    { name: 'Sobre el Estudio', href: '#nosotros' }, // Corregido ID (antes #about)
   ];
 
   const internationalLinks = [
-    { name: 'Ciudadanías', href: '#international' },
-    { name: 'Viajes al Exterior', href: '#international' },
-    { name: 'Sociedades', href: '#international' },
+    { name: 'Ciudadanías', href: '#internacional' }, // Corregido ID (antes #international)
+    { name: 'Viajes al Exterior', href: '#internacional' },
+    { name: 'Sociedades', href: '#internacional' },
   ];
 
   const handleMobileLinkClick = () => {
@@ -172,7 +173,7 @@ const Navbar = () => {
 
                 {/* Contacto */}
                 <a
-                  href="#contact"
+                  href="#contacto" // Corregido ID
                   className="text-gray-300 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium transition duration-300"
                 >
                   Contacto
@@ -180,7 +181,7 @@ const Navbar = () => {
 
                 {/* CTA */}
                 <a
-                  href="#contact"
+                  href="#contacto" // Corregido ID
                   className="ml-4 bg-secondary text-primary hover:bg-yellow-500 px-4 py-2 rounded-full text-sm font-bold shadow-lg transition transform hover:scale-105"
                 >
                   Agendar Consulta
@@ -231,7 +232,7 @@ const Navbar = () => {
               ))}
 
               <a
-                href="#contact"
+                href="#contacto"
                 onClick={handleMobileLinkClick}
                 className="text-gray-300 hover:text-secondary block px-3 py-2 rounded-md text-base border-t border-white/5 mt-2"
               >
@@ -239,7 +240,7 @@ const Navbar = () => {
               </a>
 
               <a
-                href="#contact"
+                href="#contacto"
                 onClick={handleMobileLinkClick}
                 className="block w-full text-center bg-secondary text-primary hover:bg-yellow-500 px-4 py-3 rounded-full text-base font-bold shadow-lg mt-4 mb-2 transform hover:scale-[1.01]"
               >

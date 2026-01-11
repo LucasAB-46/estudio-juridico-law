@@ -1,61 +1,68 @@
 import React from 'react';
 
 const Hero = () => {
-  // CORRECCIÓN CRÍTICA: 
-  // 1. Quitamos el punto '.' del inicio. La ruta debe ser desde la raíz ("/images/...")
-  // 2. CONFIRMA EL NOMBRE: Si tu archivo en la carpeta es 'edificio.jpg', pon eso aquí.
+  // Asegúrate de que esta ruta sea correcta según tu carpeta public
   const heroImage = "/images/edificio.jpg"; 
 
   return (
     <div id="hero" className="relative h-screen w-full overflow-hidden">
-      {/* 1. Imagen de Fondo */}
+      {/* 1. Imagen de Fondo con efecto Zoom suave */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-10000 ease-linear hover:scale-110"
         style={{ backgroundImage: `url(${heroImage})` }}
       ></div>
 
-      {/* 2. Overlay (Capa oscura para legibilidad) */}
-      {/* CAMBIO: Bajamos a 'bg-primary/60' para que la foto se vea más a través del azul */}
-      <div className="absolute inset-0 bg-primary/60"></div>
+      {/* 2. Overlay (Capa oscura + Filtro de color) */}
+      {/* mix-blend-multiply ayuda a que la foto se tiña del azul corporativo */}
+      <div className="absolute inset-0 bg-primary/70 mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* 3. Contenido */}
+      {/* 3. Contenido Principal */}
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start">
         
-        {/* Etiqueta superior pequeña */}
-        <span className="text-secondary font-bold tracking-wider uppercase mb-4 text-sm md:text-base">
-          Defensa Legal Estratégica
+        {/* SEO LOCAL: Etiqueta de ubicación */}
+        <span className="text-secondary font-bold tracking-wider uppercase mb-4 text-sm md:text-base border-l-4 border-secondary pl-3">
+          Estudio Jurídico en CABA
         </span>
 
         {/* Título Principal (H1) */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-          Protegemos tus derechos <br/>
-          <span className="text-gray-300">con firmeza y experiencia.</span>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
+          ¿Necesitás un Abogado? <br/>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-200">
+            Defendemos tus intereses.
+          </span>
         </h1>
 
-        {/* Subtítulo (Párrafo) */}
-        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl font-light">
-          Especialistas en Derecho Internacional, Laboral y Daños. 
-          Transformamos conflictos complejos en soluciones claras.
+        {/* Subtítulo (Propuesta de Valor) */}
+        <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-normal leading-relaxed">
+          Especialistas en <strong>Despidos, Accidentes, Sucesiones y Ciudadanías</strong>. 
+          Te acompañamos en cada paso con una estrategia sólida y honesta.
+          <br className="hidden md:block"/> 
+          <span className="text-secondary font-semibold mt-2 block">
+            ✅ Primera evaluación de tu caso sin costo.
+          </span>
         </p>
 
         {/* Botones de Acción (CTAs) */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          {/* Botón Principal (Dorado) */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          
+          {/* Botón Principal: Amarillo -> Lleva al Formulario */}
           <a 
-            href="#contact" 
-            className="px-8 py-4 bg-secondary text-primary font-bold text-lg rounded-md shadow-lg hover:bg-yellow-500 transition duration-300 text-center"
+            href="#contacto" 
+            className="px-8 py-4 bg-secondary text-primary font-bold text-lg rounded-md shadow-xl hover:bg-yellow-500 transition duration-300 text-center flex items-center justify-center"
           >
-            Reclamá tu Indemnización
+            Hablemos de tu caso
           </a>
 
-          {/* Botón Secundario (Borde blanco/transparente) */}
+          {/* Botón Secundario: Transparente -> Lleva a los Servicios */}
           <a 
-            href="#practice" 
+            href="#areas-practica" 
             className="px-8 py-4 border-2 border-white text-white font-bold text-lg rounded-md hover:bg-white hover:text-primary transition duration-300 text-center"
           >
-            Conocé nuestras áreas
+            Nuestros Servicios
           </a>
         </div>
+
       </div>
     </div>
   );
