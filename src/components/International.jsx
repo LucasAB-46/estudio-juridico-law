@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
+import { IoChevronDown } from 'react-icons/io5';
 import { FaPassport, FaPlane, FaGlobeAmericas } from 'react-icons/fa';
+// 1. IMPORTAR LINK
+import { Link } from 'react-router-dom';
 
 const International = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // DATOS OPTIMIZADOS PARA VENTAS (Copywriting)
   const items = [
     {
-      title: "Ciudadanía Italiana y Juicios por Turnos", // PALABRA CLAVE FUERTE
+      title: "Ciudadanía Italiana y Juicios por Turnos",
       icon: <FaPassport className="w-6 h-6" />,
       content: (
         <span>
@@ -18,16 +19,20 @@ const International = () => {
           También gestionamos rectificación de partidas, armado de carpetas consulares (Italiana y Española) y recursos administrativos.
         </span>
       ),
+      // Agregamos una propiedad para saber a dónde linkear
+      linkTo: "/ciudadania"
     },
     {
       title: "Reclamos por Vuelos y Turismo",
       icon: <FaPlane className="w-6 h-6" />,
       content: "Si te cancelaron el vuelo, perdieron tu valija o tuviste demoras, la ley internacional te protege. Gestionamos tu reclamo contra aerolíneas para que cobres la indemnización en moneda dura (Dólares/Euros) según el Convenio de Montreal.",
+      linkTo: "#contacto" // Este por ahora sigue llevando al contacto
     },
     {
       title: "Negocios Internacionales y Sociedades",
       icon: <FaGlobeAmericas className="w-6 h-6" />,
       content: "Asesoramos a PyMEs y emprendedores que quieren exportar servicios o constituir sociedades (LLC/Delaware). Te brindamos el blindaje legal necesario para operar globalmente sin riesgos fiscales ni normativos.",
+      linkTo: "#contacto"
     }
   ];
 
@@ -41,31 +46,26 @@ const International = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
-          {/* COLUMNA IZQUIERDA: Títulos e Introducción */}
+          {/* COLUMNA IZQUIERDA */}
           <div>
             <span className="text-secondary font-bold tracking-wider uppercase text-sm border-b border-secondary pb-1">
               Sin Fronteras
             </span>
-            
-            {/* TÍTULO CORREGIDO: Más comercial, menos académico */}
             <h2 className="text-3xl md:text-4xl font-bold mb-6 mt-4 leading-tight">
               Ciudadanías y <br/> 
               <span className="text-secondary">Derecho Internacional.</span>
             </h2>
-            
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
               Vivimos en un mundo globalizado, y tus derechos también deberían serlo. 
               Somos especialistas en destrabar trámites consulares y defenderte ante conflictos en el exterior.
             </p>
             
-            {/* Imagen decorativa */}
             <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 hidden lg:block group">
               <img 
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop" 
                 alt="Avión internacional" 
                 className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
               />
-              {/* Overlay sutil para integrar la imagen al fondo azul */}
               <div className="absolute inset-0 bg-primary/40 mix-blend-color"></div>
             </div>
           </div>
@@ -79,7 +79,6 @@ const International = () => {
                   activeIndex === index ? 'border-secondary bg-white/10 shadow-lg shadow-secondary/10' : 'border-white/10 hover:border-white/30'
                 }`}
               >
-                {/* Cabecera del ítem */}
                 <button
                   onClick={() => toggleAccordion(index)}
                   className="w-full px-6 py-5 flex items-center justify-between focus:outline-none"
@@ -95,7 +94,6 @@ const International = () => {
                   </span>
                 </button>
 
-                {/* Contenido desplegable */}
                 <div 
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
                     activeIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -105,11 +103,18 @@ const International = () => {
                     <div className="pt-4 text-base">
                       {item.content}
                     </div>
-                    {/* Botón de acción rápida dentro del acordeón */}
+                    
+                    {/* BOTÓN INTELIGENTE: Si es ciudadanía usa Link, sino usa <a> */}
                     <div className="mt-4">
-                        <a href="#contacto" className="text-sm font-bold text-secondary hover:text-white transition-colors border-b border-secondary hover:border-white pb-0.5">
-                            Consultar sobre esto &rarr;
-                        </a>
+                        {item.linkTo === '/ciudadania' ? (
+                            <Link to="/ciudadania" className="text-sm font-bold text-secondary hover:text-white transition-colors border-b border-secondary hover:border-white pb-0.5">
+                                Ver más información &rarr;
+                            </Link>
+                        ) : (
+                            <a href="#contacto" className="text-sm font-bold text-secondary hover:text-white transition-colors border-b border-secondary hover:border-white pb-0.5">
+                                Consultar sobre esto &rarr;
+                            </a>
+                        )}
                     </div>
                   </div>
                 </div>

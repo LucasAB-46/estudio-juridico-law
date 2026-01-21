@@ -1,45 +1,30 @@
+// src/App.jsx
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import PracticeAreas from "./components/PracticeAreas";
-import International from "./components/International";
-import Contact from "./components/Contact";
 import WhatsAppButton from "./components/WhatsAppButton";
-// Importar Footer si lo tienes, sino es un pendiente para después
-// import Footer from "./components/Footer"; 
+import Home from "./pages/Home";
+import Ciudadania from "./pages/Ciudadania";
+import Laboral from "./pages/Laboral";
+
+// 1. IMPORTAR
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen"> 
-      {/* Navbar fijo arriba */}
+      {/* 2. AGREGAR AQUÍ (Tiene que estar dentro del BrowserRouter que está en main.jsx) */}
+      <ScrollToTop />
+      
       <Navbar /> 
       
-      {/* Todo el contenido principal va DENTRO de main */}
-      <main className="flex-grow">
-        <Hero />
-        
-        {/* ID para navegación (scroll) */}
-        <div id="areas-practica">
-           <PracticeAreas />
-        </div>
-
-        <div id="nosotros">
-           <About />
-        </div>
-
-        <div id="internacional">
-           <International /> 
-        </div>
-
-        <div id="contacto">
-           <Contact />
-        </div>
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ciudadania" element={<Ciudadania />} />
+        <Route path="/laboral" element={<Laboral />} />
+      </Routes>
 
       <WhatsAppButton />
-      {/* <Footer /> */}
-      
     </div>
   );
 }
