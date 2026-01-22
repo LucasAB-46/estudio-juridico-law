@@ -73,7 +73,7 @@ const Laboral = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-green-600 font-bold mr-3 text-xl">✓</span>
-                <span className="text-gray-700"><strong>Indemnización sobre tu Sueldo Real:</strong> Si cobrabas una parte 'por fuera', exigimos que tu liquidación se calcule sobre el total real que llevabas a tu casa.</span>
+                <span className="text-gray-700"><strong>Indemnización sobre tu Sueldo Real:</strong> Si cobrabas un proporcional de tu sueldo que no coincide con tu recibo exigimos que tu liquidacion se calcule sobre el sueldo total percibido.</span>
               </li>
             </ul>
             <a 
@@ -105,7 +105,7 @@ const Laboral = () => {
              <div className="bg-white p-6 rounded-xl shadow-lg">
                 <h3 className="text-lg font-bold text-[#d4af37] mb-2">¿Sabías que...?</h3>
                 <p className="text-gray-600">
-                  La ART tiene sus propios médicos que siempre intentan darte el alta antes de tiempo y con "0% de incapacidad" para no pagarte nada. 
+                  La ART tiene sus propios médicos que siempre intenta darte el alta antes de tiempo y determinado 0% de incapacidad para no abonar indemnizaciones. 
                   <br/><br/>
                   <strong>Nunca aceptes el alta sin consultar a un abogado.</strong>
                 </p>

@@ -1,5 +1,5 @@
 import React from 'react';
-// 1. IMPORTAMOS LINK DE REACT ROUTER
+// Importamos Link para la navegación interna rápida
 import { Link } from 'react-router-dom'; 
 import { FaBalanceScale, FaPassport, FaPlane, FaBriefcase, FaGavel, FaHandshake } from 'react-icons/fa';
 
@@ -11,15 +11,15 @@ const PracticeAreas = () => {
       title: "Despidos y Reclamos Laborales",
       description: "¿Te despidieron o estás en negro? Reclamá tu indemnización justa. No firmes nada sin consultarnos.",
       icon: <FaBriefcase className="w-8 h-8" />,
-      link: "/laboral", // RUTA INTERNA
-      cta: "Calcular indemnización" // TEXTO PERSONALIZADO
+      link: "/laboral", // Va a la página Laboral
+      cta: "Calcular indemnización"
     },
     {
       id: 2,
       title: "Accidentes de Tránsito y ART",
       description: "Si sufriste un accidente o una enfermedad laboral, aseguramos que la aseguradora te pague lo que corresponde.",
       icon: <FaGavel className="w-8 h-8" />,
-      link: "/laboral#art", // RUTA INTERNA CON ANCLA
+      link: "/laboral#art", // Va a la sección ART de Laboral
       cta: "Iniciar reclamo ART"
     },
     {
@@ -27,7 +27,7 @@ const PracticeAreas = () => {
       title: "Ciudadanía Italiana y Española",
       description: "Armado de carpetas, rectificación de actas y gestión de turnos. Hacé realidad tu pasaporte europeo.",
       icon: <FaPassport className="w-8 h-8" />,
-      link: "/ciudadania", // RUTA INTERNA
+      link: "/ciudadania", // Va a la Landing de Ciudadanía
       cta: "Ver requisitos"
     },
     {
@@ -35,24 +35,24 @@ const PracticeAreas = () => {
       title: "Reclamos Aéreos y Turismo",
       description: "Vuelos cancelados, pérdida de equipaje o estafas turísticas. Defendemos tus derechos como pasajero.",
       icon: <FaPlane className="w-8 h-8" />,
-      link: "#contacto", // ANCLA (Se queda en la home)
-      cta: "Consultar ahora"
+      link: "/reclamos-turismo", // ¡NUEVO! Conectado a Turismo.jsx
+      cta: "Iniciar reclamo"
     },
     {
       id: 5,
       title: "Contratos y Sociedades (PyMEs)",
       description: "Constitución de SAS/SRL, acuerdos de socios y blindaje legal para tu negocio o emprendimiento.",
       icon: <FaHandshake className="w-8 h-8" />,
-      link: "#contacto",
-      cta: "Consultar ahora"
+      link: "/empresas", // ¡NUEVO! Conectado a Empresas.jsx
+      cta: "Ver servicios"
     },
     {
       id: 6,
       title: "Sucesiones y Herencias",
       description: "Trámite sucesorio ágil. Gestionamos la declaratoria de herederos y la inscripción de bienes sin vueltas.",
       icon: <FaBalanceScale className="w-8 h-8" />,
-      link: "#contacto",
-      cta: "Consultar ahora"
+      link: "/sucesiones", // ¡NUEVO! Conectado a Sucesiones.jsx
+      cta: "Consultar trámite"
     }
   ];
 

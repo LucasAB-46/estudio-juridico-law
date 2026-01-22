@@ -6,8 +6,9 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
 import Ciudadania from "./pages/Ciudadania";
 import Laboral from "./pages/Laboral";
-
-// 1. IMPORTAR
+import Sucesiones from "./pages/Sucesiones";
+import Turismo from "./pages/Turismo";
+import Empresas from "./pages/Empresas"
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/ciudadania" element={<Ciudadania />} />
         <Route path="/laboral" element={<Laboral />} />
+        <Route path="/sucesiones" element={<Sucesiones />} />
+        <Route path="/reclamos-turismo" element={<Turismo />} />
+        <Route path="/empresas" element={<Empresas />} />
       </Routes>
 
       <WhatsAppButton />
