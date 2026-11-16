@@ -153,8 +153,8 @@ const Contact = () => {
                   <InstagramIcon size={20} />
                 </div>
                 <div>
-                  <a href="https://www.instagram.com/abogada.law" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 font-semibold">
-                    Seguinos en Instagram
+                  <a href="https://www.instagram.com/estudiofleitasabuin/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 font-semibold">
+                    Seguinos en Instagram: @estudiofleitasabuin
                   </a>
                 </div>
               </div>
