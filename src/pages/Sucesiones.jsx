@@ -1,13 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
 
 const Sucesiones = () => {
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
-      <Helmet>
-        <title>Abogados de Sucesiones | Trámites Rápidos en CABA y PBA</title>
-        <meta name="description" content="Gestionamos sucesiones de principio a fin. Declaratoria de herederos, inscripción de bienes y tracto abreviado. Consulta honorarios." />
-      </Helmet>
+      <Seo
+        title="Abogados de Sucesiones | Trámites Rápidos en CABA y PBA"
+        description="Gestionamos sucesiones de principio a fin. Declaratoria de herederos, inscripción de bienes y tracto abreviado. Consulta honorarios."
+        path="/sucesiones"
+      />
 
       <div className="bg-[#0a1f44] text-white py-16 px-6 text-center">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 font-serif">Sucesiones y Herencias</h1>

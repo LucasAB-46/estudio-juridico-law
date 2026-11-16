@@ -63,7 +63,9 @@ const International = () => {
             <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 hidden lg:block group">
               <img 
                 src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop" 
-                alt="Avión internacional" 
+                alt="Avión internacional"
+                      loading="lazy"
+                      decoding="async" 
                 className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-primary/40 mix-blend-color"></div>

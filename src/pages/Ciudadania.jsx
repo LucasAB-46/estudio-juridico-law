@@ -1,19 +1,16 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
 
 const Ciudadania = () => {
   return (
     <div className="bg-slate-50 min-h-screen">
       
       {/* SEO: Configuración específica para esta Landing Page */}
-      <Helmet>
-        <title>Ciudadanía Italiana y Juicios por Falta de Turno | Estudio Fleitas Abuin</title>
-        <meta 
-          name="description" 
-          content="¿Imposible conseguir turno en el consulado? Iniciamos tu juicio por falta de turno en Italia. Obtené tu ciudadanía europea sin viajar y para toda la familia." 
-        />
-        <link rel="canonical" href="https://estudiofleitasabuin.com/ciudadania" />
-      </Helmet>
+      <Seo
+        title="Ciudadanía Italiana y Juicios por Falta de Turno | Estudio Fleitas Abuin"
+        description="¿Imposible conseguir turno en el consulado? Iniciamos tu juicio por falta de turno en Italia. Obtené tu ciudadanía europea sin viajar y para toda la familia."
+        path="/ciudadania"
+      />
       
       {/* 1. HERO SECTION: Atacando el dolor principal (Falta de Turnos) */}
       <div className="relative bg-[#0a1f44] text-white py-20 px-6">
@@ -62,10 +59,12 @@ const Ciudadania = () => {
             </ul>
           </div>
           
-          {/* IMAGEN: Asegurate de tener 'pasaporte-italia.jpg' en public/images/ */}
+          {/* IMAGEN: Asegurate de tener 'pasaporte-italia.webp' en public/images/ */}
           <div className="rounded-xl shadow-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-all duration-500">
              <img 
-               src="/images/pasaporte-italia.jpg" 
+               src="/images/pasaporte-italia.webp"
+                      loading="lazy"
+                      decoding="async" 
                alt="Pasaporte Italiano y trámite judicial" 
                className="w-full h-80 object-cover"
                onError={(e) => {

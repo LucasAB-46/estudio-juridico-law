@@ -10,6 +10,7 @@ import Sucesiones from "./pages/Sucesiones";
 import Turismo from "./pages/Turismo";
 import Empresas from "./pages/Empresas"
 import ScrollToTop from "./components/ScrollToTop";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/sucesiones" element={<Sucesiones />} />
         <Route path="/reclamos-turismo" element={<Turismo />} />
         <Route path="/empresas" element={<Empresas />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <WhatsAppButton />

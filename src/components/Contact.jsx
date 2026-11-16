@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackLead } from '../analytics';
 
 // --- Iconos SVG Inlined ---
 const PhoneIcon = (props) => (
@@ -53,6 +54,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        trackLead('form_submit', { form: 'contacto' }); // conversión para GA4
         setStatus('¡Consulta recibida! Te contactaremos a la brevedad.');
         setFormData({ name: '', email: '', phone: '', message: '' });
       } else {

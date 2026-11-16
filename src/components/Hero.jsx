@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   // Asegúrate de que esta ruta sea correcta según tu carpeta public
-  const heroImage = "/images/edificio.jpg"; 
+  const heroImage = "/images/edificio.webp"; 
 
   return (
     <div id="hero" className="relative h-screen w-full overflow-hidden">

@@ -6,9 +6,35 @@
     
     <meta name="google-site-verification" content="mOHok62S80oPomqVXhGl9Gr8EOCoLSpBLpLWKNGGyRE" />
     
-    <title>Estudio Jurídico Fleitas Abuin | Abogados en CABA</title>
-    
-    <meta name="description" content="Abogados especialistas en Derecho Laboral, Sucesiones, Divorcios y Ciudadanías. Asesoramiento integral y respuesta rápida. Consulta hoy." />
+    <!-- title, description, canonical y Open Graph de cada página: los genera el prerender (src/components/Seo.jsx) -->
+    <!--app-head-->
+    <meta name="theme-color" content="#0a1f44" />
+
+    <!-- Datos estructurados: le dicen a Google que esto es un estudio jurídico, dónde está y cómo contactarlo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "@id": "https://estudiofleitasabuin.com/#estudio",
+      "name": "Estudio Jurídico Fleitas Abuin & Asoc.",
+      "url": "https://estudiofleitasabuin.com/",
+      "logo": "https://estudiofleitasabuin.com/images/logo.svg",
+      "image": "https://estudiofleitasabuin.com/images/og-image.jpg",
+      "description": "Estudio jurídico en el Microcentro de CABA. Despidos y reclamos laborales, accidentes y ART, sucesiones, ciudadanía italiana y española, reclamos aéreos y asesoramiento a PyMEs.",
+      "telephone": "+54 9 11 2407-6677",
+      "email": "Afleitasabuin@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Roque Sáenz Peña 832, Piso 6",
+        "addressLocality": "Ciudad Autónoma de Buenos Aires",
+        "addressRegion": "CABA",
+        "addressCountry": "AR"
+      },
+      "areaServed": ["Ciudad Autónoma de Buenos Aires", "Gran Buenos Aires"],
+      "knowsAbout": ["Derecho laboral", "Despidos", "Accidentes de trabajo y ART", "Sucesiones", "Ciudadanía italiana", "Ciudadanía española", "Reclamos aéreos", "Sociedades comerciales"],
+      "sameAs": ["https://www.instagram.com/abogada.law"]
+    }
+    </script>
 
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
 
@@ -19,6 +45,8 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-K2TZGVTW');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   </head>
 

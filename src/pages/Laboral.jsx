@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
 import { Link } from "react-router-dom";
 
 const Laboral = () => {
@@ -7,14 +7,11 @@ const Laboral = () => {
     <div className="bg-slate-50 min-h-screen font-sans">
       
       {/* SEO: Palabras clave de ART y Despidos */}
-      <Helmet>
-        <title>Abogados Laborales y ART | Reclamos por Despidos y Accidentes</title>
-        <meta 
-          name="description" 
-          content="¿Te despidieron o tuviste un accidente de trabajo? Reclamá tu indemnización completa. Especialistas en ART y Trabajo en Negro. Consulta gratuita." 
-        />
-        <link rel="canonical" href="https://estudiofleitasabuin.com/laboral" />
-      </Helmet>
+      <Seo
+        title="Abogados Laborales en CABA | Despidos y Reclamos a la ART"
+        description="¿Te despidieron o tuviste un accidente de trabajo? Reclamá tu indemnización completa. Especialistas en ART y Trabajo en Negro. Consulta gratuita."
+        path="/laboral"
+      />
 
       {/* 1. HERO COMPARTIDO: Ataca la urgencia general */}
       <div className="bg-[#0a1f44] text-white py-20 px-6 relative overflow-hidden">
