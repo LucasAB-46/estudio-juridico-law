@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackLead } from '../analytics';
 
 // --- Iconos SVG Inlined ---
 const PhoneIcon = (props) => (
@@ -53,6 +54,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        trackLead('form_submit', { form: 'contacto' }); // conversión para GA4
         setStatus('¡Consulta recibida! Te contactaremos a la brevedad.');
         setFormData({ name: '', email: '', phone: '', message: '' });
       } else {
@@ -151,8 +153,8 @@ const Contact = () => {
                   <InstagramIcon size={20} />
                 </div>
                 <div>
-                  <a href="https://www.instagram.com/abogada.law" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 font-semibold">
-                    Seguinos en Instagram
+                  <a href="https://www.instagram.com/estudiofleitasabuin/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 font-semibold">
+                    Seguinos en Instagram: @estudiofleitasabuin
                   </a>
                 </div>
               </div>

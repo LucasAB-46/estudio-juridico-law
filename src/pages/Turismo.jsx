@@ -1,13 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
 
 const Turismo = () => {
   return (
     <div className="bg-slate-50 min-h-screen font-sans">
-      <Helmet>
-        <title>Reclamos Aéreos y Turismo | Vuelos Cancelados y Equipaje</title>
-        <meta name="description" content="¿Vuelo cancelado o valija perdida? Reclamamos tu indemnización en dólares/euros según normas internacionales. No aceptes vouchers." />
-      </Helmet>
+      <Seo
+        title="Reclamos por Vuelos Cancelados y Equipaje | Abogados en CABA"
+        description="¿Vuelo cancelado o valija perdida? Reclamamos tu indemnización en dólares/euros según normas internacionales. No aceptes vouchers."
+        path="/reclamos-turismo"
+      />
 
       <div className="bg-[#0a1f44] text-white py-16 px-6 text-center relative overflow-hidden">
         <h1 className="text-3xl md:text-5xl font-bold mb-4 font-serif">Defensa del Viajero</h1>

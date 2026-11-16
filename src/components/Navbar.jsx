@@ -49,7 +49,7 @@ const Navbar = () => {
             <a href="/" className="flex items-center space-x-3">
               <img
                 src={logoPath}
-                alt="Logo Abogada Law"
+                alt="Logo Estudio Jurídico Fleitas Abuin"
                 className="h-12 sm:h-14 w-auto object-contain drop-shadow-lg"
               />
               <div className="flex flex-col">

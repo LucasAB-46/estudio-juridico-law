@@ -9,19 +9,19 @@ import 'swiper/css/effect-fade';
 const About = () => {
   const slides = [
     {
-      src: '/images/reunion.png',
+      src: '/images/reunion.webp',
       title: 'Trato Personalizado',
       text: 'No delegamos tu caso a asistentes. Hablás directo con los abogados responsables.',
       vertical: false,
     },
     {
-      src: '/images/estudio.png',
+      src: '/images/estudio.webp',
       title: 'Infraestructura Profesional',
       text: 'Ubicados en el corazón de la City Porteña, con acceso inmediato a Tribunales.',
       vertical: false,
     },
     {
-      src: '/images/trabajando.png',
+      src: '/images/trabajando.webp',
       title: 'Estrategia Ganadora',
       text: 'No improvisamos. Cada expediente se estudia a fondo antes de dar un paso.',
       vertical: false,
@@ -93,6 +93,8 @@ const About = () => {
                     <img
                       src={slide.src}
                       alt={slide.title}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10000ms] ease-linear scale-100 group-hover:scale-110"
                     />
 

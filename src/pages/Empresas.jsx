@@ -1,13 +1,14 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import Seo from "../components/Seo";
 
 const Empresas = () => {
   return (
     <div className="bg-white min-h-screen font-sans">
-      <Helmet>
-        <title>Abogados para PyMEs y Empresas | Contratos y Sociedades</title>
-        <meta name="description" content="Asesoramiento legal corporativo. Constitución de SAS/SRL, redacción de contratos y blindaje legal para tu negocio." />
-      </Helmet>
+      <Seo
+        title="Abogados para PyMEs en CABA | Contratos y Sociedades"
+        description="Asesoramiento legal corporativo. Constitución de SAS/SRL, redacción de contratos y blindaje legal para tu negocio."
+        path="/empresas"
+      />
 
       <div className="bg-gray-50 py-16 px-6 border-b border-gray-200">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
